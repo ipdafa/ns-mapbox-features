@@ -59,7 +59,7 @@ export class ItemsComponent implements OnInit {
         });
     }
 
-    @ViewChild("map") public mapbox: ElementRef;
+    @ViewChild("map", {static: false}) public mapbox: ElementRef;
 
     onMapReady(args: any) {
         args.map.setCenter(
